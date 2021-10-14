@@ -1,0 +1,48 @@
+module.exports = {
+
+                            production: {
+                                          username: 'root',
+                                          password: '3DX5d0XjHqHoA6ujzZ4z',
+                                                                  database: 'sta                                                                                                             rsdustcrm',
+                                                                  host: 'starsdu                                                                                                             stcrm.cnt9wfbo0gmq.eu-central-1.rds.amazonaws.com',
+                                                                  port: 3306,
+                                                                  dialect: 'mysq                                                                                                             l',
+                                                                  dialectOptions                                                                                                             : {
+                                                                                                                                                                                                                     bigNumberStrings: true
+                                                                                                                                                                                                                 },
+                                                                "seederStorage":                                                                                                              "sequelize",
+                                                                "seederStorageTa                                                                                                             bleName": "sequelize_data",
+                                                                pool:{
+                                                                                                                                                                                                                 max: 100,
+                                                                                                                                                                                                                 min: 0,
+                                                                                                                                                                                                                 idle: 200000,
+                                                                                                                                                                                                                 acquire: 1000000,
+                                                                                                                                                                                                                 }
+                                                                },
+                            host: 'starsdustcrm.cnt9wfbo0gmq.eu-central-1.rds.am                                                                                                             azonaws.com',
+                            username: 'root',
+                            password: '3DX5d0XjHqHoA6ujzZ4z',
+                            mongoDBUrl:'mongodb://starsdustcrm:XjHqHoA6ujzZ4@sta                                                                                                             rsdust-crm-mongo.cluster-cnt9wfbo0gmq.eu-central-1.docdb.amazonaws.com:27017/?ss                                                                                                             l=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=sec                                                                                                             ondaryPreferred&retryWrites=false',
+
+
+                            apiUrl: '',
+                            baseURL: "https://crmapi.starsdustcrm.com",
+                            redisHost: "democrm-redis.uro1iv.0001.euc1.cache.ama                                                                                                             zonaws.com",
+                            redisPort: 6379,
+                            env: 'prod',
+                            csv: '/var/www/worldadmin-crm/public/csv/',
+                            csv_url: 'https://crmapi.starsdustcrm.com/csv/',
+                            adminPanelUrl: "https://starsdustcrm.com",
+                            sendNotification: 0,
+                            environment: 'production',
+                           emails: 'pankaj.k@bettertechsolution.com,anuj@bettert                                                                                                             echsolution.com,hagai@bettertechsolution.com,sachin.g@bettertechsolution.com,viv                                                                                                             ek.s@bettertechsolution.comi,neeru.g@bettertechsolution.com',
+                            errormailfrom: 'no-reply@mail-hub.xyz',
+                            sendemail: 'no-reply@mail-hub.xyz',
+                            wallet_base_url:"https://ct-api.ctecho.io/integratio                                                                                                             n",
+                            lambdaUrl: "https://lambda.starsdustcrm.com",
+                            praxis:"https://gateway.praxispay.com/cashier/cashie                                                                                                             r",
+                            chunk: 5000
+
+
+};
+

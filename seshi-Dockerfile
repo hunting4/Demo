@@ -1,0 +1,5 @@
+FROM
+ADD ./code
+WORKDIR
+RUN install -r requirements.txt
+CMD

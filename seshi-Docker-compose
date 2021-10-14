@@ -1,0 +1,72 @@
+version: '3.3'
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      image: nodejs
+      container_name: nodejs	   
+	  restart: always 
+	  env_file: .env_file
+	  environment:
+	    - MONGO_USERNAME=$MONGO_USERNAME 
+		- MONGO_PASSWORD=$MONGO_PASSWORD
+		- MONGO_HOSTNAME=<MONGO-DB>
+		- MONGO_PORT=$MONGO_PORT
+		- MONGO_DB=$MONGO_DB
+    ports:
+      - "80:8080"
+#volumes: 
+#- .:/home/node/app
+#- node_modules:/home/node/app/node_modules
+
+  MONGO-DB:
+# images: mongo:4.1.8-xenial<we can use hear dockerfile for build mysqldb>
+	build:
+	  context: .
+      dockerfile: mongodbdockerfile
+	  image: MONGO-DB-img
+	  container_name: MONGO-DB
+	  restart: always
+	  env_file: .env
+	  environment:
+	   - MONGO_INITDB_ROOT_USERNAME=$MONGO_USERNAME	   
+	   - MONGO_INITDB_ROOT_PASSWORD=$MONGO_PASSWORD
+==================================MYSQL========================	   
+  MYSQLDB:
+# images: mysql:<version>
+    build:
+	  context: .
+	  dockerfile: mysqldockerfile
+	  image: MYSQL-DB-img
+	  container_name: MYSQLDB
+	  restart: always
+	  env_file: .env
+	  environment:
+	   - MYSQL_ROOT_PASSWORD=<>
+	   - MYSQL_DATABASE=<>
+	   - MYSQL_USER=<>
+	   - MYSQL_PASSWORD=<>
+	   
+=========================REDIS==================================
+  REDIS
+# images: redis:<version>
+    build:
+	  context: .
+	  dockerfile: redisdockerfile
+	  image: REDIS-img
+	  container_name: REDISDB
+	  restart: always
+	  env_file: .env
+	  environment:  
+    	
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 ============================== docker-file====================================================
+	 
